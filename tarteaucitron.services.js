@@ -1230,7 +1230,7 @@ tarteaucitron.services.gtag = {
         tarteaucitron.addScript('https://www.googletagmanager.com/gtag/js?id=' + tarteaucitron.user.gtagUa, '', function () {
             window.gtag = function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', tarteaucitron.user.gtagUa);
+            gtag('config', tarteaucitron.user.gtagUa, { 'anonymize_ip': true });
 
             if (typeof tarteaucitron.user.gtagMore === 'function') {
                 tarteaucitron.user.gtagMore();
@@ -2783,8 +2783,8 @@ tarteaucitron.services.matomo = {
         }, 100)
     }
 };
-                          
-                          
+
+
 tarteaucitron.services.matomohightrack = {
     "key": "matomohightrack",
     "type": "analytic",
@@ -3115,7 +3115,7 @@ tarteaucitron.services.userlike = {
         tarteaucitron.addScript('//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/' + tarteaucitron.user.userlikeKey);
     }
 };
-                          
+
 // adobeanalytics
 tarteaucitron.services.adobeanalytics = {
     "key": "adobeanalytics",
