@@ -29,6 +29,7 @@ var tarteaucitron = {
     "parameters": {},
     "isAjax": false,
     "reloadThePage": false,
+    "respondAllState": -1,
     "events": {
         "init": function () {},
         "load": function () {},
@@ -322,8 +323,8 @@ var tarteaucitron = {
                 html += '      </div>';
                 html += '      <div class="tarteaucitronBorder">';
                 html += '         <div class="clear"></div><ul>';
-                                            
-                                            
+
+
                 if (tarteaucitron.parameters.mandatory == true) {
                    html += '<li id="tarteaucitronServicesTitle_mandatory">';
                    html += '<div class="tarteaucitronTitle">';
@@ -740,6 +741,8 @@ var tarteaucitron = {
         },
         "respondAll": function (status) {
             "use strict";
+            tarteaucitron.respondAllState = status;
+
             var s = tarteaucitron.services,
                 service,
                 key,
@@ -764,6 +767,8 @@ var tarteaucitron = {
                     tarteaucitron.userInterface.color(key, status);
                 }
             }
+
+            tarteaucitron.respondAllState = -1;
         },
         "respond": function (el, status) {
             "use strict";
