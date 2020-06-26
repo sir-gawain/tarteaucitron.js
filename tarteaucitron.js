@@ -1296,7 +1296,7 @@ var tarteaucitron = {
                 }
 
                 if (nbCurrent > 0) {
-                    html += tarteaucitron.lang.useCookieCurrent + ' ' + nbCurrent + ' cookie';
+                    html += tarteaucitron.lang.useCookieCurrent + ' ' + nbCurrent + ' Cookie';
                     if (nbCurrent > 1) {
                         html += 's';
                     }
@@ -1307,7 +1307,7 @@ var tarteaucitron = {
             } else if (nb === 0) {
                 html = tarteaucitron.lang.noCookie;
             } else {
-                html += tarteaucitron.lang.useCookie + ' ' + nb + ' cookie';
+                html += tarteaucitron.lang.useCookie + ' ' + nb + ' Cookie';
                 if (nb > 1) {
                     html += 's';
                 }
@@ -1398,7 +1398,7 @@ var tarteaucitron = {
             }
 
             if (document.getElementById('tarteaucitronCookiesNumberBis') !== null) {
-                document.getElementById('tarteaucitronCookiesNumberBis').innerHTML = nb + ' cookie' + s;
+                document.getElementById('tarteaucitronCookiesNumberBis').innerHTML = nb + ' Cookie' + s;
             }
 
             for (i = 0; i < tarteaucitron.job.length; i += 1) {
